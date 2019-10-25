@@ -83,4 +83,3 @@ private:
 	std::shared_ptr<CBSPNode> 			m_pLeft;
 	std::shared_ptr<CBSPNode> 			m_pRight;
 };
-

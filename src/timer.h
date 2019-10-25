@@ -31,10 +31,10 @@ namespace DirectGraphicalModels
 		*/
 		void stop(void) 
 		{
-			int64 ms = static_cast<int64>(1000 * (getTickCount() - m_ticks) / getTickFrequency());
-			int64 sec = 0;
-			int64 min = 0;
-			int64 hrs = 0;
+			long long ms = static_cast<int64>(1000 * (getTickCount() - m_ticks) / getTickFrequency());
+			long long sec = 0;
+			long long min = 0;
+			long long hrs = 0;
 
 			if (ms >= 1000) {
 				sec = ms / 1000;

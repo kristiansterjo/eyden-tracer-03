@@ -37,6 +37,9 @@ public:
 	{
 		CBoundingBox bounds;
 		// --- PUT YOUR CODE HERE ---
+
+        bounds.m_min = std::numeric_limits<Vec3f>::infinity()*(-1);
+        bounds.m_max = std::numeric_limits<Vec3f>::infinity();
 		return bounds;
 	}
 	

@@ -69,6 +69,14 @@ public:
 	{
 		CBoundingBox res;
 		// --- PUT YOUR CODE HERE ---
+
+		res.extend(m_a);
+        res.extend(m_b);
+        res.extend(m_c);
+		
+        res.m_min = std::numeric_limits<Vec3f>::infinity();
+        res.m_max = std::numeric_limits<Vec3f>::infinity()*(-1);
+       
 		return res;
 	}
 	

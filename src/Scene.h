@@ -90,6 +90,12 @@ public:
 	{
 		CBoundingBox res;
 		// --- PUT YOUR CODE HERE ---
+		
+		res.m_min = std::numeric_limits<float>::infinity();
+ 		res.m_max = -1 * std::numeric_limits<float>::infinity();
+ 		for (auto prim : m_vpPrims){
+ 			res.extend(prim->calcBounds());
+ 		}
 		return res;
 	}
 	/**

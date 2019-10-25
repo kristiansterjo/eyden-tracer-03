@@ -64,8 +64,14 @@ public:
 
 	virtual CBoundingBox calcBounds(void) const override
 	{
+		
 		CBoundingBox res;
 		// --- PUT YOUR CODE HERE ---
+		Vec3f a = Vec3f(m_radius,m_radius,m_radius);
+		res.extend(m_center + a);
+        res.m_min = std::numeric_limits<Vec3f>::infinity();
+        res.m_max = std::numeric_limits<Vec3f>::infinity()*(-1);
+        
 		return res;
 	}
 	
@@ -73,4 +79,3 @@ private:
 	Vec3f m_center;	///< Position of the center of the sphere
 	float m_radius;	///< Radius of the sphere
 };
-
